@@ -1,7 +1,7 @@
 app:
     name: mariadb Master
     code: mariadbmaster
-    notify: appzdev@cloudbourne.co
+    notify: ssubhendu@hillers.org
 
 build:
     version: 10.4
@@ -11,7 +11,7 @@ build:
     image_template: mariadb_master-10.4
 
 deploy:
-    context: alpha/DEV
+    context: Sandkelp/DEV
     type: statefulset
     replicas: 1
     port:
@@ -35,4 +35,4 @@ properties:
       vault: MYSQL_WORDPRESS_PASSWORD
     MYSQL_ROOT_PASSWORD:
       vault: MYSQL_ROOT_PASSWORD_KEY
-    revision : 25
+    revision : 26
